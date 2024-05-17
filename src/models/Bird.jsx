@@ -9,7 +9,6 @@ export function Bird() {
   const birdRef = useRef();
 
   const { scene, animations } = useGLTF(birdScene);
-
   const { actions } = useAnimations(animations, birdRef);
 
   useEffect(() => {
