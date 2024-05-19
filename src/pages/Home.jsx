@@ -28,7 +28,7 @@ const Home = () => {
     };
   }, [isPlayingMusic]);
 
-  const adjustBiplaneForScreenSize = () => {
+  const adjustPlaneForScreenSize = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
@@ -56,7 +56,7 @@ const Home = () => {
     return [screenScale, screenPosition, islandRotation];
   };
 
-  const [planeScale, planePosition] = adjustBiplaneForScreenSize();
+  const [planeScale, planePosition] = adjustPlaneForScreenSize();
   const [islandScale, islandPosition, islandRotation] =
     adjustIslandForScreenSize();
 
@@ -91,8 +91,8 @@ const Home = () => {
             setCurrentStage={setCurrentStage}
           />
           <Plane
-            planePosition={planePosition}
-            planeScale={planeScale}
+            position={planePosition}
+            scale={planeScale}
             isRotating={isRotating}
             rotation={[0, 20, 0]}
           />
