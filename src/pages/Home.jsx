@@ -1,9 +1,9 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
-import Loader from "../components/Loader";
-
+import { soundoff, soundon } from "../assets/icons";
 import sakura from "../assets/sakura.mp3";
 import HomeInfo from "../components/HomeInfo";
+import Loader from "../components/Loader";
 import { Bird } from "../models/Bird";
 import Island from "../models/Island";
 import { Plane } from "../models/Plan";
@@ -98,6 +98,14 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
+      <div className="absolute bottom-2 left-2">
+        <img
+          src={!isPlayingMusic ? soundoff : soundon}
+          alt="jukebox"
+          onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+          className="w-10 h-10 cursor-pointer object-contain"
+        />
+      </div>
     </section>
   );
 };

@@ -1,7 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
-
 import Alert from "../components/Alert";
 import Loader from "../components/Loader";
 import useAlert from "../hooks/useAlert";
@@ -13,6 +12,8 @@ const Contact = () => {
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
+
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
