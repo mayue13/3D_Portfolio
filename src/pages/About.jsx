@@ -15,11 +15,14 @@ const About = () => {
           {" "}
           Mayur
         </span>{" "}
-        👋
       </h1>
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p>All about me</p>
+        <p>
+          Software Developer from India, skilled in C#, ASP.NET Core, Angular,
+          and React, with a portfolio of scalable web applications and RESTful
+          APIs.
+        </p>
       </div>
 
       {/* skills section */}
@@ -65,7 +68,7 @@ const About = () => {
                     <img
                       src={experience.icon}
                       alt={experience.company_name}
-                      className="w-[60%] h-[60%] object-contain"
+                      className="w-[100%] h-[100%] object-contain"
                     />
                   </div>
                 }

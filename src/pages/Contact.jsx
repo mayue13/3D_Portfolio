@@ -13,8 +13,6 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
 
-  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
-
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
@@ -73,7 +71,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative flex lg:flex-row flex-col max-container h-[100vh]">
+    <section className="relative flex lg:flex-row flex-col max-container">
       {alert.show && <Alert {...alert} />}
 
       <div className="flex-1 min-w-[50%] flex flex-col">
