@@ -35,7 +35,7 @@ const renderContent = {
   ),
   4: (
     <InfoBox
-      text=" Need a project done or looking for a dev?I'm just a few keystrokes away"
+      text="Looking to hire a software developer for any project? I'm just a few keystrokes away!"
       link="/contact"
       btnText="Lets talk"
     />
